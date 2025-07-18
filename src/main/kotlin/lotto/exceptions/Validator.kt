@@ -14,7 +14,8 @@ object Validator {
         size: Int,
     ) {
         val ableToPurchase = amount / LottoTicket.PRICE_OF_TICKET
-        require(ableToPurchase > 0 && size <= ableToPurchase) { ExceptionMessage.TOO_SMALL }
+        require(ableToPurchase > 0) { ExceptionMessage.TOO_SMALL }
+        require(size > 0 && size <= ableToPurchase) { ExceptionMessage.TOO_SMALL }
     }
 
     fun numbers(numbers: Set<Int>) {
