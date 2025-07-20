@@ -22,7 +22,7 @@
 
 - [x] Add the controller where happen the flow of the app
 - [x] Use View classes for input and output
-- [x] Create a retry help functions to validate de input and in case of error retry it.
+- [x] Create a retry help functions to validate the input and in case of error, retry it.
 - [x] Create a method or service to create the Lotto tickets
 - [x] Create retry helper function to get user input
 - [x] Add a generateLottoTickets service
@@ -30,7 +30,7 @@
 ### Services
 
 - [x] add Lotto service
-- [x] add Validator for the purchase amount user input
+- [x] add Validator for the purchase amount of user input
 - [x] Add a service to generate the lotto tickets from the amount passed
 - [x] minimum ticket: 1000 KRW
 
