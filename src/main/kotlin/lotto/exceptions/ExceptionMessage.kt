@@ -7,4 +7,5 @@ object ExceptionMessage {
     const val NOT_DIVISIBLE = "not divisible"
     const val NOT_SUFFICIENT_SIZE = "lotto ticket has not sufficient size"
     const val DUPLICATE = "Duplicate number found"
+    const val TOO_BIG = "too big"
 }
