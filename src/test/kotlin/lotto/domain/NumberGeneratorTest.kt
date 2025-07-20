@@ -25,7 +25,7 @@ class NumberGeneratorTest {
     fun `does not throw if have SUFFICIENT_SIZE numbers`() {
         assertDoesNotThrow {
             val input = listOf(1, 2, 3, 4, 5, 6)
-            val result = NumberGenerator.sufficientSizeNumbers(input)
+            NumberGenerator.sufficientSizeNumbers(input)
         }
     }
 }

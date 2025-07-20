@@ -9,15 +9,13 @@ data class UserPurchase(
     val maxPurchasable: Int = getMaxPurchasable(amount)
     val randomTicketsCount: Int = getRandomTicketsCount(maxPurchasable, manualTicketsCount)
 
-    companion object {
-        private fun getMaxPurchasable(amount: Int) = amount / LottoTicket.PRICE_OF_TICKET
+    private fun getMaxPurchasable(amount: Int) = amount / LottoTicket.PRICE_OF_TICKET
 
-        private fun getRandomTicketsCount(
-            total: Int,
-            manualNumber: Int,
-        ): Int {
-            require(total >= manualNumber) { "total must be >= $manualNumber" }
-            return total - manualNumber
-        }
+    private fun getRandomTicketsCount(
+        total: Int,
+        manualNumber: Int,
+    ): Int {
+        require(total >= manualNumber) { "total must be >= $manualNumber" }
+        return total - manualNumber
     }
 }

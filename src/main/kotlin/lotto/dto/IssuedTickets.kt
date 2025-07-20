@@ -3,8 +3,6 @@ package lotto.dto
 import lotto.domain.LottoTicket
 
 data class IssuedTickets(val tickets: List<LottoTicket>) {
-    fun size() = tickets.size
-
     operator fun plus(ticket: LottoTicket): IssuedTickets {
         return IssuedTickets(
             tickets.toMutableList()
