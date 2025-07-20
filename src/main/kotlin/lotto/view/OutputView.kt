@@ -13,8 +13,10 @@ object OutputView {
                 "Purchased ${purchaseResult.userPurchase.manualTicketsCount} manual " +
                     "and ${purchaseResult.userPurchase.randomTicketsCount} automatic $pluralized.",
             )
-            purchaseResult.totalTickets.get().forEach { println("[$it]") }
+            purchaseResult.totalTickets.tickets.forEach { println("[${it.toText()}]") }
         }
+
+        internal fun LottoTicket.toText(): String = toRawSet().sortedBy { it }.joinToString(", ") { it.toString() }
 
         fun winningStatistics(rankedTickets: RankedTickets) {
             Prompt.winningStatisticsTitle()

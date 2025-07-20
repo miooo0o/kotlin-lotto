@@ -1,5 +1,6 @@
 package lotto.domain
 
+import lotto.view.OutputView.Print.toText
 import org.assertj.core.api.Assertions.assertThat
 import org.junit.jupiter.api.Test
 import org.junit.jupiter.api.assertDoesNotThrow
@@ -57,7 +58,7 @@ class LottoTicketTest {
                 LottoNumber.from(6),
             )
         assertThat(
-            LottoTicket(setOfLottoNumber).toString(),
+            LottoTicket(setOfLottoNumber).toText(),
         ).isEqualTo("1, 2, 3, 4, 5, 6")
     }
 

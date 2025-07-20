@@ -1,10 +1,12 @@
 package lotto.domain
 
-@JvmInline
-value class LottoNumber(private val value: Int) {
-    fun getValue(): Int = value
+import lotto.exceptions.Validator
 
-    override fun toString(): String = value.toString()
+@JvmInline
+value class LottoNumber(val value: Int) {
+    init {
+        Validator.number(value)
+    }
 
     companion object {
         internal const val MIN_RANGE_NUMBER = 1

@@ -9,7 +9,7 @@ object TicketsEvaluator {
         issuedTickets: IssuedTickets,
         winningCombination: WinningCombination,
     ): List<Rank> {
-        return issuedTickets.get().map {
+        return issuedTickets.tickets.map {
             it.getRank(winningCombination)
         }
     }
